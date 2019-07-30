@@ -1,0 +1,23 @@
+﻿@model MvcCoreDemo3.Models.HomeViewModel
+
+@{
+    ViewData["Title"] = "GetCategory";
+}
+
+<h1>GetCategory</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Categories) {
+    <tr><td>@item.Id </td><td>@item.Name</td></tr>
+}
+    </tbody>
+</table>
